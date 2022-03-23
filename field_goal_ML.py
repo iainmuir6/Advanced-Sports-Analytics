@@ -5,6 +5,8 @@ FILE DESCRIPTION
 
 """
 
+from constants import LOCAL_ROOT
+
 from sklearn.metrics import confusion_matrix, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -18,7 +20,7 @@ def aggregate():
     fgs = pd.DataFrame()
 
     for year in range(2015, 2020):
-        file = '/Users/iainmuir/Desktop/4Y 1S/STAT 4800/Dataset/{} PFF All Plays.csv'.format(year)
+        file = LOCAL_ROOT + 'Dataset/{} PFF All Plays.csv'.format(year)
         df = pd.read_csv(
             file,
             low_memory=False    # Silence dType Error
@@ -99,7 +101,7 @@ def log_reg(fgs, threshold=0.5):
     return lr_model, f1_score
 
 
-df = pd.read_csv('all_FGs.csv')
+df = pd.read_csv('data/all_FGs.csv')
 
 thresholds = np.arange(0.5, 1.05, 0.05)
 f1_scores = []
@@ -108,15 +110,3 @@ for t in thresholds:
     f1_scores.append(f1)
 plt.plot(thresholds, f1_scores)
 plt.show()
-
-# ----- Authorship Information -----
-
-__author__ = 'Iain A. Muir'
-__email__ = 'iam9ez@virginia.edu'
-__date__ = ''
-__copyright__ = ''
-__credits__ = []
-__license__ = ''
-__version__ = ''
-__maintainer__ = ''
-__status__ = 'Prototype'
