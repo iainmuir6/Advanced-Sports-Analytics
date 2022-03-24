@@ -1,5 +1,5 @@
-<p align='center'>
-  <img src="https://upload.wikimedia.org/wikipedia/en/8/85/PFF-Logo-White-1_reduced.png" width="200"/>
+<p align="center">
+  <img src='https://www.salesforce.org/wp-content/uploads/2021/02/uva-university-of-virginia-logo.png' width=300 align='center'/>
 </p>  
 
 # STAT4800 - Advanced Sports Analytics
@@ -7,6 +7,11 @@
 ## Course Objectives
 
 Explore sports analytics through advanced statistical methods, including simulation, markov chains, generalized linear models, and mixture models. Deliverables include biweekly homeworks and mainly a final project, aimed to create an Expected Points Added Model.
+
+## Dataset  
+<img src="https://upload.wikimedia.org/wikipedia/en/8/85/PFF-Logo-White-1_reduced.png" width="100"/>
+
+The bulk of our assignments used Pro Football Focus data, which includes extensive positional and contextual data for every play of an NFL Season. Our class had acesss to 5 years of data, which in total consisted of over 5 million rows of data. This data cannot be shared in full for proprietary reasons.
 
 ## Homework
 
